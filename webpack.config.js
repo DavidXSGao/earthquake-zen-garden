@@ -3,16 +3,16 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  template: "./src/index.html",
+  template: "./public/index.html",
   filename: "./index.html",
 });
 
 module.exports = {
   entry: "./src",
   output: {
-    path: path.resolve(__dirname, "dist/"),
+    path: path.resolve(__dirname, "build/"),
     publicPath: "/",
-    filename: "bundle.js",
+    filename: "build.[fullhash].js",
   },
   module: {
     rules: [
@@ -21,7 +21,17 @@ module.exports = {
         use: ["babel-loader"],
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".json"],
   },
   plugins: [htmlWebpackPlugin],
 };
