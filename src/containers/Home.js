@@ -1,4 +1,18 @@
 import React from "react";
-export default function Home(props) {
-  return <h1>Home</h1>;
+import EarthquakeSummaryTable from "./../components/EarthquakeSummaryTable";
+
+export default function Home({ earthQuakeData }) {
+  const homeTitle = earthQuakeData?.metadata?.title
+    ? earthQuakeData.metadata.title
+    : "";
+  return (
+    <div className="mainContainer">
+      <div className="pageTitle">
+        <b>{homeTitle}</b>
+      </div>
+      <div className="pageBody">
+        <EarthquakeSummaryTable earthQuakeData={earthQuakeData} />
+      </div>
+    </div>
+  );
 }

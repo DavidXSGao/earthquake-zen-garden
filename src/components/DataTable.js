@@ -8,7 +8,7 @@ function sanitizeKey(key) {
 
 export default function DataTable({ data }) {
   return (
-    <table className="dataTable">
+    <table className="table">
       <tbody>
         {Object.keys(data).map((dataKey, index) => {
           return (
