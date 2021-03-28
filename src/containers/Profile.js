@@ -11,10 +11,10 @@ export default function Profile({ profileData }) {
   delete profileDataCopy.avatarImage;
   return (
     <div className="mainContainer">
-      <div className="profileTitle">
+      <div className="pageTitle">
         <b>{PROFILE_TITLE}</b>
       </div>
-      <div className="profileBody">
+      <div className="pageBody">
         <div className="profilePicture">
           <img
             src={profilePictureSource}
