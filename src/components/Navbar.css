@@ -1,13 +1,13 @@
-header {
+.navbar {
   background: #ededed;
-  height: 10vh;
+  height: 15vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header div {
+.navbar div {
   height: inherit;
   display: flex;
   align-items: center;

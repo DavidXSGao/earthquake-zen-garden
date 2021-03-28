@@ -1,0 +1,10 @@
+.dataTable {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 4vh;
+}
+
+.dataCellKey {
+  width: 12vw;
+  vertical-align: top;
+}
