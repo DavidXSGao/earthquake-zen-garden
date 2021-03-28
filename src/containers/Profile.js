@@ -7,8 +7,19 @@ export default function Profile({ profileData }) {
   const profilePictureSource = profileData?.avatarImage
     ? profileData.avatarImage
     : "";
-  const profileDataCopy = { ...profileData };
-  delete profileDataCopy.avatarImage;
+  const profileFN = profileData?.firstName ? profileData.firstName : "";
+  const profileLN = profileData?.lastName ? profileData.lastName : "";
+  const profilePhone = profileData?.phone ? profileData.phone : "";
+  const profileEmail = profileData?.email ? profileData.email : "";
+  const profileBio = profileData?.bio ? profileData.bio : "";
+  const dataToShow = {
+    "First Name": profileFN,
+    "Last Name": profileLN,
+    phone: profilePhone,
+    email: profileEmail,
+    bio: profileBio,
+  };
+
   return (
     <div className="mainContainer">
       <div className="pageTitle">
@@ -24,7 +35,7 @@ export default function Profile({ profileData }) {
           />
         </div>
         <div className="profileTable">
-          <DataTable data={profileDataCopy} />
+          <DataTable data={dataToShow} />
         </div>
       </div>
     </div>

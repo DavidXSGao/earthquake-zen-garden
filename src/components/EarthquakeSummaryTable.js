@@ -41,10 +41,6 @@ export default function EarthquakeSummaryTable({ earthQuakeData }) {
     }
   };
 
-  useEffect(() => {
-    console.log("hello");
-  }, [features]);
-
   return (
     <table className="table">
       <thead>
