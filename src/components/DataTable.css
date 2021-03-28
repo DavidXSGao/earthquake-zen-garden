@@ -1,4 +1,9 @@
 .dataCellKey {
   width: 12vw;
   vertical-align: top;
+  color: #444444;
+}
+
+.dataCellValue {
+  color: #777777;
 }

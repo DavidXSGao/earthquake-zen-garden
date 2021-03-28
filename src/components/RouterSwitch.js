@@ -4,9 +4,14 @@ import Home from "../containers/Home";
 import Detail from "../containers/Detail";
 import Profile from "../containers/Profile";
 
-export default function RouterSwitch(props) {
-  const profileData = props.data.profile;
-  const earthQuakeData = props.data.data;
+/**
+ * This component is responsible for managing the routing of this application
+ *
+ * @param {Object} data of the application passed around to other components
+ */
+export default function RouterSwitch({ data }) {
+  const profileData = data.profile;
+  const earthQuakeData = data.data;
   return (
     <Switch>
       <Route

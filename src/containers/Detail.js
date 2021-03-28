@@ -4,6 +4,11 @@ import DataTable from "./../components/DataTable";
 import { formatTimeToDate } from "./../utils/utils";
 import "./Detail.css";
 
+/**
+ * Page view of the detail of an earthquake
+ *
+ * @param {Object} earthQuakeData used to display the details of an earthquake
+ */
 export default function Detail({ earthQuakeData }) {
   const { id } = useParams();
   const detailFeature = earthQuakeData?.features?.find(

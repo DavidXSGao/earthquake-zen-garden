@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./EarthquakeSummaryTable.css";
 import {
   EARTHQUAKE_DATA_KEYS,
@@ -7,6 +7,12 @@ import {
 import { cmpArrayValues, formatTimeToDate } from "./../utils/utils";
 import { Link } from "react-router-dom";
 
+/**
+ * Renders the elements of EARTHQUAKE_DATA_KEYS as the headings
+ * and the corresponding values from earthQuakeData in a standard table
+ *
+ * @param {Object} earthQuakeData object used to display the contents
+ */
 export default function EarthquakeSummaryTable({ earthQuakeData }) {
   const earthQuakeDataFeatures = earthQuakeData?.features;
   const [features, setFeatures] = useState(earthQuakeDataFeatures);

@@ -14,3 +14,5 @@ export const PROFILE_TITLE = "Profile";
 
 /** Navbar */
 export const NAVBAR_GREETING = "Welcome";
+export const LOGO_ALT = "Realtor.com Logo";
+export const LOGO_TITLE = "Navigate to home";
