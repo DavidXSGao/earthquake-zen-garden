@@ -3,18 +3,12 @@ import "./Navbar.css";
 import { NAVBAR_GREETING } from "../constants/constants";
 import { Link } from "react-router-dom";
 
-export default function Navbar(props) {
-  const logoSource = props.data?.siteData?.logoImage
-    ? props.data?.siteData?.logoImage
-    : "";
-  const siteTitle = props.data?.siteData?.title
-    ? props.data.siteData.title
-    : "";
-  const firstName = props.data?.profileData?.firstName
-    ? props.data.profileData.firstName
-    : "";
+export default function Navbar({ siteData, profileData }) {
+  const logoSource = siteData?.logoImage ? siteData.logoImage : "";
+  const siteTitle = siteData?.title ? siteData.title : "";
+  const firstName = profileData?.firstName ? profileData.firstName : "";
   return (
-    <header>
+    <header className="navbar">
       <div>
         <Link to={"/"}>
           <img

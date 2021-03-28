@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter as Router } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import RouterSwitch from "../components/RouterSwitch";
+import "./App.css";
 
 import { DATA } from "../static/data/data";
 
@@ -11,8 +12,8 @@ export default function App() {
   const profileData = DATA.profile;
   return (
     <Router>
-      <div className="body">
-        <Navbar data={{ siteData, profileData }} />
+      <div className="wrapper">
+        <Navbar siteData={siteData} profileData={profileData} />
         <RouterSwitch data={DATA} />
       </div>
     </Router>
