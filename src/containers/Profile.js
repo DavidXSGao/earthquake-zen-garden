@@ -3,6 +3,11 @@ import "./profile.css";
 import { PROFILE_TITLE } from "./../constants/constants";
 import DataTable from "./../components/DataTable";
 
+/**
+ * Page view of a profile
+ *
+ * @param {Object} profileData used to display the details of a profile
+ */
 export default function Profile({ profileData }) {
   const profilePictureSource = profileData?.avatarImage
     ? profileData.avatarImage

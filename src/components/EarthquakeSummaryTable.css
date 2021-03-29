@@ -1,4 +1,5 @@
 .eqSummaryHeading,
 .eqSummaryValue:not(:first-child) {
   text-align: center;
+  color: #444444;
 }
