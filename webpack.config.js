@@ -10,8 +10,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 module.exports = {
   entry: "./src",
   output: {
-    path: path.resolve(__dirname, "build/"),
-    publicPath: "/",
+    path: path.resolve(__dirname, "build"),
     filename: "build.[fullhash].js",
   },
   module: {
@@ -31,7 +30,7 @@ module.exports = {
     historyApiFallback: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".jsx"],
   },
   plugins: [htmlWebpackPlugin],
 };
